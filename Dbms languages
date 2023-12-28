@@ -1,3 +1,4 @@
+
 Dbms:
   ->Dbms stands for the database management system
   -> It is software or application that allows to insert, update, delete, and manage the database
@@ -42,4 +43,23 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
   Syntax-
   truncate table_name;
   ex truncate tb_staff;
+----------------------------------------------------------------------------------
+2 DML-DML Statements are used to manipulate/change data in the database. 
+    DML Commands-insert, update, delete
+    Insert statement:- Insert statement is used to add a new record in a table
+    Syntax -insert into table_name (column_name1,column_name2......)values(C1_value,c2_value,c3_value3)
+    Ex-insert into table_name (s_name,s_id,s_mobile) values("Rohit",1,812056)
+    
+    UPDATE COMMAND: Update command used to modify the existing record of a table.
+    update table_name set column1=value,coulumn2=value2,column3=value3 where condition
+    update tb_staff set s_name="Rohit" where s_id=101;
 
+    A delete statement is used to delete a record in the table
+    delete from table_name where condition
+    EX- delete from tb_staff where s_id="101";
+
+3   DQL-DQL Stands for Data Query Language.
+        ->DQL statement is used to retrieve a record from a table.
+        syntax
+        
+    
