@@ -1,19 +1,45 @@
-DBMS Languages
+Dbms:
+  ->Dbms stands for the database management system
+  -> It is software or application that allows to insert, update, delete, and manage the database
+  ->Database->Processed information.
+
+There are 5 types of DBMS Languages
+              
   1 DDL-DDL statements are used to specify the schema of the 
-database.
+    database.
   DDL commands-create, drop, alter, rename
   Syntax-create database Db_name
   create database School
   ------------------------------------------------------------------
 Table Creation
-table statement is used  to create a table
+  table statement is used  to create a table
   create table table_name( column_name datatype,column_name datatype,.....)
   create table tb_staff(s_name varchar(10),s_id int,s_mobile int))
 --------------------------------------------------------------------
 DROP TABLE Statement
-drop statement is used to delete a table
+  drop statement is used to delete a table
   drop table tb_name
   drop table tb_staff
 -------------------------------------------------------------------
 ALTER TABLE Statement
-  Alter statement is used to add, modify, and delete the column in the existing table
+  Alter statement is used to add, modify, and delete the column in the existing table.
+  ALTER TABLE - ADD Column
+  alter table tb_name(column_name Data_type)
+  alter table tb_staff salary int
+
+ALTER TABLE - DROP COLUMN
+  The Alter command is used to delete a column in an existing table
+  Syntax-
+  alter table table_name drop column_name
+  alter table tb_staff drop salary;
+
+ALTER TABLE-MODIFY COLUMN
+  It is used to change a data type in a column
+  alter table table_name existing_column_name change datatype name
+  alter table table _name
+
+TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
+  Syntax-
+  truncate table_name;
+  ex truncate tb_staff;
+
