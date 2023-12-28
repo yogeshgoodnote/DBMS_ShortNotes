@@ -1,0 +1,19 @@
+DBMS Languages
+  1 DDL-DDL statements are used to specify the schema of the 
+database.
+  DDL commands-create, drop, alter, rename
+  Syntax-create database Db_name
+  create database School
+  ------------------------------------------------------------------
+Table Creation
+table statement is used  to create a table
+  create table table_name( column_name datatype,column_name datatype,.....)
+  create table tb_staff(s_name varchar(10),s_id int,s_mobile int))
+--------------------------------------------------------------------
+DROP TABLE Statement
+drop statement is used to delete a table
+  drop table tb_name
+  drop table tb_staff
+-------------------------------------------------------------------
+ALTER TABLE Statement
+  Alter statement is used to add, modify, and delete the column in the existing table
