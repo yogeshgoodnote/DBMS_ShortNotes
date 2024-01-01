@@ -65,8 +65,21 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
         syntax
         select * from table_name where condition
         Ex select S_name * from tb_staff where s_id="101"
-4   DCL -DCL statements are used to control user access privileges
+
+4   DCL -
+    DCL- stands for Data control language.
+    DCL statements are used to control user access privileges
     two commands come in the DCL statement Grant, Revoke
+    Grant Command-
+    Grant Command is used to give privileges to the user.
+
+    Syntax-GRANT privileges ON database_name.table_name TO 'username'@'hostname';
+    *privileges are the specific privileges you want to grant, 
+      such as SELECT, INSERT, UPDATE, DELETE, etc. 
+
+REVOKE Command-REVOKE statement is used to remove permission/privileges from a user that was previously granted.
+
+User Creation
 
   CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
   create database yo;
@@ -78,7 +91,8 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 
 GRANT privileges ON database_name.table_name TO 'username'@'hostname';
 
-privileges are the specific privileges you want to grant, 
+privileges
+are the specific privileges you want to grant, 
 such as SELECT, INSERT, UPDATE, DELETE, etc. 
 You can also use ALL PRIVILEGES to grant all privileges.
 database_name is the name of the database.
