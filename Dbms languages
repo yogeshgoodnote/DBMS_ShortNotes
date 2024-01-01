@@ -16,6 +16,8 @@ Table Creation
   table statement is used  to create a table
   create table table_name( column_name datatype,column_name datatype,.....)
   create table tb_staff(s_name varchar(10),s_id int,s_mobile int))
+  To see Table Structure 
+  DESCRIBE staff;
 --------------------------------------------------------------------
 DROP TABLE Statement
   drop statement is used to delete a table
@@ -49,7 +51,8 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
     Insert statement:- Insert statement is used to add a new record in a table
     Syntax -insert into table_name (column_name1,column_name2......)values(C1_value,c2_value,c3_value3)
     Ex-insert into table_name (s_name,s_id,s_mobile) values("Rohit",1,812056)
-    
+    select *from table_name;
+
     UPDATE COMMAND: Update command used to modify the existing record of a table.
     update table_name set column1=value,coulumn2=value2,column3=value3 where condition
     update tb_staff set s_name="Rohit" where s_id=101;
@@ -61,5 +64,30 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 3   DQL-DQL Stands for Data Query Language.
         ->DQL statement is used to retrieve a record from a table.
         syntax
-        
-    
+        select * from table_name where condition
+        Ex select S_name * from tb_staff where s_id="101"
+4 DCL -DCL statements are used to control user access privileges
+  two commands come in the DCL statement Grant, Revoke
+
+  CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
+  create database yo;
+  SHOW TABLES FROM urdatabase_name;
+  USE clg;
+  show databases;
+  Exit MySQL:
+    \q
+
+GRANT privileges ON database_name.table_name TO 'username'@'hostname';
+
+privileges are the specific privileges you want to grant, 
+such as SELECT, INSERT, UPDATE, DELETE, etc. 
+You can also use ALL PRIVILEGES to grant all privileges.
+database_name is the name of the database.
+able_name is the name of the table. You can also use * as a wildcard to indicate all tables in the specified database.
+username'@'hostname' represents the user account and the host from which the user is allowed to connect. 
+You can use a wildcard (%) for the hostname to allow connections from any host.
+
+Show user Privileges
+SHOW GRANTS FOR 'username'@'hostname';
+show grants for yogesh@localhost;  
+
