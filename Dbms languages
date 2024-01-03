@@ -1,4 +1,4 @@
-aDbms:
+Dbms:
   ->Dbms stands for the database management system
   -> It is software or application that allows to insert, update, delete, and manage the database
   -> Database->Processed information.
@@ -88,7 +88,7 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 
 		EX
 
-		REVOKE SELECT ON school.staff from yogesh@hostname; .
+		REVOKE SELECT ON school. staff from yogesh@hostname;
 
 User Creation
 
@@ -99,6 +99,8 @@ Show databases
 Select database
   USE clg;
   show databases;
+TO SEE tables
+show tables;
   Exit MySQL/logout user from mysql
     \q
 Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
