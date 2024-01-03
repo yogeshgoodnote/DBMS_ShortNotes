@@ -89,20 +89,26 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 		EX
 
 		REVOKE SELECT ON school. staff from yogesh@hostname;
-
-User Creation
-
-  CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
-  create database yo;
-Show databases
-  SHOW TABLES FROM urdatabase_name;
-Select database
-  USE clg;
-  show databases;
-TO SEE tables
-show tables;
-  Exit MySQL/logout user from mysql
-    \q
-Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
+	
+	Extra Commands
+	User Creation
+ 	 CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
+	To Drop user
+	DROP USER 'username'@'hostname';
+	Ex
+	DROP USER yogi@localhost;
+  	create database yo;
+	To see User
+ 	select user from mysql.user;
+	Show databases
+ 	 SHOW TABLES FROM urdatabase_name;
+	Select database
+	  USE clg;
+ 	 show databases;
+	TO SEE tables
+	show tables;
+ 	 Exit MySQL/logout user from mysql
+   	 \q
+	Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
 
 
