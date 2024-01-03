@@ -67,51 +67,40 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
         Ex select S_name * from tb_staff where s_id="101"
 
 4   DCL -
-    DCL- stands for Data control language.
-    DCL statements are used to control user access privileges
-    two commands come in the DCL statement Grant, Revoke
-    Grant Command-
-    Grant Command is used to give privileges to the user.
+*Full-form Data control language
+* Dcl statements are used to control user access privileges
+* Privileges-Insert, update, delete, All privileges, etc
 
-    Syntax-GRANT privileges ON database_name.table_name TO 'username'@'hostname';
-    *privileges are the specific privileges you want to grant, 
-      such as SELECT, INSERT, UPDATE, DELETE, etc. 
+* There are two commands in DCL Statements-
+ 	1 GRANT Command-It is used to give privileges to the user
+		Syntax-
 
-REVOKE Command-REVOKE statement is used to remove permission/privileges from a user that was previously granted.
+		Grant Privileges on DataBase_name.Table_name to yogesh@hostName;
+		Ex-
+
+		GRANT SELECT ON school. staff to yogesh@localhost;
+
+		
+ 	2 REVOKE Command - The REVOKE statement is used to remove permission/privileges from a user that was previously granted
+		Syntax
+
+		REVOKE PRIVILEGES ON DATABASE_NAME.TABLE_NAME FROM USER_NAME@HOSTNAME;
+
+		EX
+
+		REVOKE SELECT ON school.staff from yogesh@hostname; .
 
 User Creation
 
   CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
   create database yo;
+Show databases
   SHOW TABLES FROM urdatabase_name;
+Select database
   USE clg;
   show databases;
-  Exit MySQL:
+  Exit MySQL/logout user from mysql
     \q
-
-GRANT privileges ON database_name.table_name TO 'username'@'hostname';
-
-privileges
-are the specific privileges you want to grant, 
-such as SELECT, INSERT, UPDATE, DELETE, etc. 
-You can also use ALL PRIVILEGES to grant all privileges.
-database_name is the name of the database.
-*table_name- is the name of the table. You can also use * as a wildcard to indicate all tables in the specified database.
-*username'@'hostname'- represents the user account and the host from which the user is allowed to connect. 
-You can use a wildcard (%) for the hostname to allow connections from any host.
-
-Show user Privileges
-SHOW GRANTS FOR 'username'@'hostname';
-show grants for yogesh@localhost;  
-
-REVOKE Command-REVOKE statement is used to remove permission/privileges from a user that was previously granted.
-
-Syntax-
-REVOKE PRIVILEGES ON [OBJECTTYPE]OBJECT_NAME FROM USER@LOCLALHOST;
-  * PRIVILEGES-INSERT, UPDATE, DELETE, ALL PRIVILEGES.
-  EX-REVOKE SELECT ON CLG.STAF FROM yogesh@localhost;
-  * [object_type] -TABLE, PROCEDURE, FUNCTION, or DATABASE
-  *'user'@'host'-specific user name and hostname
 Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
 
 
