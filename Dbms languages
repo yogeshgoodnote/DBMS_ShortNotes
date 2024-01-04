@@ -10,19 +10,19 @@ There are 5 types of DBMS Languages
   DDL commands-create, drop, alter, rename
   Syntax-create database Db_name
   create database School
-  ------------------------------------------------------------------
+  
 Table Creation
   table statement is used  to create a table
   create table table_name( column_name datatype,column_name datatype,.....)
   create table tb_staff(s_name varchar(10),s_id int,s_mobile int))
   To see Table Structure 
   DESCRIBE staff;
---------------------------------------------------------------------
+
 DROP TABLE Statement
   drop statement is used to delete a table
   drop table tb_name
   drop table tb_staff
--------------------------------------------------------------------
+
 ALTER TABLE Statement
   Alter statement is used to add, modify, and delete the column in the existing table.
   ALTER TABLE - ADD Column
@@ -44,7 +44,7 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
   Syntax-
   truncate table_name;
   ex truncate tb_staff;
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 2 DML-DML Statements are used to manipulate/change data in the database. 
     DML Commands-insert, update, delete
     Insert statement:- Insert statement is used to add a new record in a table
@@ -65,7 +65,7 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
         syntax
         select * from table_name where condition
         Ex select S_name * from tb_staff where s_id="101"
-
+----------------------------------------------------------------------------------------------------------
 4   DCL -
 *Full-form Data control language
 * Dcl statements are used to control user access privileges
@@ -89,6 +89,7 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 		EX
 
 		REVOKE SELECT ON school. staff from yogesh@hostname;
+-------------------------------------------------------------------------------------------------------------------------------------
 	
 	Extra Commands
 	User Creation
@@ -110,5 +111,14 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
  	 Exit MySQL/logout user from mysql
    	 \q
 	Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
-
-
+------------------------------------------------------------------------------------------------------------------------------
+	
+	5. TCL stands for Transaction control language.
+	TCL statements are used to control transactions in the database.
+	There are two tcl statements-
+	* COMMIT- This command is used to permanently save the changes made during the current transaction.
+	 COMMIT;
+	* ROLLBACK: This command is used to undo the changes made during the current transaction.
+	ROLLBACK;
+	* ROLLBACK TO SAVEPOINT: This command rolls back the current transaction to a specified savepoint.
+	ROLLBACK TO SAVEPOINT savepoint_name;
