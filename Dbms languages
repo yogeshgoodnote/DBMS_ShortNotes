@@ -122,3 +122,4 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 	ROLLBACK;
 	* ROLLBACK TO SAVEPOINT: This command rolls back the current transaction to a specified savepoint.
 	ROLLBACK TO SAVEPOINT savepoint_name;
+	5 Entry save point k bad utna hi roll back Karega
