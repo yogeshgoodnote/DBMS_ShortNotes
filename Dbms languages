@@ -122,4 +122,49 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 	ROLLBACK;
 	* ROLLBACK TO SAVEPOINT: This command rolls back the current transaction to a specified savepoint.
 	ROLLBACK TO SAVEPOINT savepoint_name;
-	5 Entry save point k bad utna hi roll back Karega
+	5 Entry save point k bad tuna hi roll back Karega
+
+Key
+DBMS
+7 types of key
+ACC -SPUF
+1   Alternate Key
+2   Composite key
+3   candidate key
+4   super key
+5   primary key
+6   unique key
+7   foreign key
+
+1 Super key- a set of attributes that can uniquely identify a record
+
+Ex (P_id,P_name)
+
+2 Candidate Key-
+* Minimal set of super key.
+* In a table, there can be multiple candidate keys
+* Each candidate key must be unique across all records in the table.
+* The candidate key is a potential primary key but is not necessarily chosen as the primary key.
+Ex P_id
+3 Primary Key
+ the primary key has two property
+ 1>Unique
+ 2>NotNull
+Ex UID
+3 Foreign key-foreign key is a field (or collection of fields) in one table, that refers to the primary key in another table
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50)
+);
+create table Booking(
+Book_id int primary key,
+date_of_issue date,
+foreign key (student_id) REFERENCES student(student_id));
+
+Composite key- A composite key is the combination of two or more attributes that can uniquely a record.
+CREATE TABLE student_enrollment (
+    student_id INT,
+    course_id INT,
+    enrollment_date DATE,
+    PRIMARY KEY (student_id, course_id)
+);
