@@ -124,11 +124,24 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 	ROLLBACK TO SAVEPOINT savepoint_name;
 	5 Entry save point k bad tuna hi roll back Karega
 
-Key
-DBMS
+
+DBMS Key
 7 types of key
 ACC -SPUF
-1   Alternate Key
+1   Alternate Key-jo candidate key primary key nhi banti use alternane key hoti h
+-- Create users table
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE,  -- Alternate Key
+    email VARCHAR(100) UNIQUE,     -- Primary Key
+    full_name VARCHAR(100),
+    birthdate DATE
+);
+
+-- Insert data into the users table
+INSERT INTO users (user_id, username, email, full_name, birthdate) 
+VALUES (1, 'john_doe', 'john@example.com', 'John Doe', '1990-01-15');
+
 2   Composite key
 3   candidate key
 4   super key
@@ -168,3 +181,7 @@ CREATE TABLE student_enrollment (
     enrollment_date DATE,
     PRIMARY KEY (student_id, course_id)
 );
+
+What is a Unique Key?
+Unique Keys are the keys that define the record uniquely in the table. 
+It is different from Primary Keys, as Unique Key can contain one NULL value but Primary Key does not contain any NULL values.
