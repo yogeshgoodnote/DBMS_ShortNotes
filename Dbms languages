@@ -185,3 +185,29 @@ CREATE TABLE student_enrollment (
 What is a Unique Key?
 Unique Keys are the keys that define the record uniquely in the table. 
 It is different from Primary Keys, as Unique Key can contain one NULL value but Primary Key does not contain any NULL values.
+
+Triggers in MySQL
+
+A trigger is a set of instructions or actions
+automatically performed ("triggered") in response to certain events on a particular table.
+Each Trigger is associated with the table activated on any DML statement such as INSERT, UPDATE, or DELETE.
+
+There are two main types of triggers:
+
+1 BEFORE Triggers:
+
+These triggers are executed before the triggering event (e.g., before an INSERT, UPDATE, or DELETE operation).
+They can be used to validate or modify the data before it is actually updated in the table.
+
+2 AFTER Triggers:
+
+These triggers are executed after the triggering event has occurred.
+They are commonly used for tasks such as updating other tables, logging changes, or sending notifications.
+
+Syntax-
+CREATE TRIGGER TRIGGER_NAME TRIGGER_TIME TRIGGER_EVENT 
+ON TABLE_NAME FOR EACH ROW
+BEGIN
+--VARIABLE DECLAERTION
+--TRIGGER CODE
+END;
