@@ -192,7 +192,7 @@ A trigger is a set of instructions or actions
 automatically performed ("triggered") in response to certain events on a particular table.
 Each Trigger is associated with the table activated on any DML statement such as INSERT, UPDATE, or DELETE.
 
-There are two main types of triggers:
+There are two types of triggers:
 
 1 BEFORE Triggers:
 
