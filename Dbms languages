@@ -187,6 +187,7 @@ Unique Keys are the keys that define the record uniquely in the table.
 It is different from Primary Keys, as Unique Key can contain one NULL value but Primary Key does not contain any NULL values.
 
 Triggers in MySQL
+trigger is a special type of stored procedure that occurs on a certain event
 
 A trigger is a set of instructions or actions
 automatically performed ("triggered") in response to certain events on a particular table.
@@ -211,3 +212,19 @@ BEGIN
 --VARIABLE DECLAERTION
 --TRIGGER CODE
 END;
+
+Example
+create database bank;
+use bank;
+create table Accnt(Acc_no int primary key auto_increment,acc_name varchar(20));
+create table balance(Acc_no int,amt decimal,foreign key(Acc_no) references Accnt(Acc_no));
+delimiter //
+create trigger tig after insert on Accnt for each row 
+begin
+insert into balance (Acc_no,amt) values(new.Acc_no,1000);
+end
+//
+
+select * from Accnt;
+select * from balance;
+insert into Accnt (acc_name) values('rohit');
