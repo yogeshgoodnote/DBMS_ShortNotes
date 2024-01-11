@@ -239,6 +239,16 @@ select * from Accnt;
 select * from balance;
 insert into Accnt (acc_name) values('rohit');
 -----------------------------------------------------------------------------------------------------------------------------
+
 Stored Procedure -
-A stored procedure is a collection of pre-compiled SQL statements
+
+* A stored procedure is a collection of pre-compiled SQL statements
+* Stored Procedures are created to perform one or one DML operation on the Database.
+delimiter //
+create procedure procedure name([in | OUT | INOUT] PARAMETER_name datatype)
+BEGIN
+Declear_Section
+Executable_section
+//
+
 
