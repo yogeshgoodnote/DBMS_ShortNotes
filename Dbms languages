@@ -188,7 +188,13 @@ It is different from Primary Keys, as Unique Key can contain one NULL value but 
 
 Triggers in MySQL
 trigger is a special type of stored procedure that occurs on a certain event response.
-
+Syntax-
+CREATE TRIGGER TRIGGER_NAME TRIGGER_TIME TRIGGER_EVENT 
+ON TABLE_NAME FOR EACH ROW
+BEGIN
+--VARIABLE DECLAERTION
+--TRIGGER CODE
+END;
 or
 
 A trigger is a set of instructions or actions
@@ -202,9 +208,11 @@ There are two types of triggers:
 These triggers are executed before the triggering event (e.g., before an INSERT, UPDATE, or DELETE operation).
 They can be used to validate or modify the data before it is actually updated in the table.
 
+
 2 AFTER Triggers:
 
-These triggers are executed after the triggering event has occurred.
+These triggers are executed after the tr
+has occurred.
 They are commonly used for tasks such as updating other tables, logging changes, or sending notifications.
 
 Syntax-
