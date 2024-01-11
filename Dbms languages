@@ -238,3 +238,7 @@ end
 select * from Accnt;
 select * from balance;
 insert into Accnt (acc_name) values('rohit');
+-----------------------------------------------------------------------------------------------------------------------------
+Stored Procedure -
+A stored procedure is a collection of pre-compiled SQL statements
+
