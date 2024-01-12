@@ -268,6 +268,7 @@ Declear_Section
 Executable_section
 //
 
+Default Parameter
 Example
 delimiter //
 create procedure Data_insert3()
@@ -281,3 +282,37 @@ To execute a stored procedure
 
 
 
+In Parameter
+create database bank;
+use bank;
+create table student(S_id int primary key auto_increment,S_name varchar(10));
+delimiter //
+create procedure Put_Data(in S_Name varchar(10))
+begin
+insert into student(S_name) values(S_Name);
+end
+//
+delimiter //
+create procedure Get_Data(in n int)
+begin
+select * from student limit n;
+end
+
+//
+call Put_Data('rohit');
+call Get_Data(1);
+
+OUT Parameter
+show tables from bank;
+select * from student;
+alter table student add column percentage int;
+describe student;
+insert into student(S_name,percentage) values('shyam',72);
+delimiter //
+create procedure max_percent3(out m int)
+begin
+select max(percentage) into m from student;
+end
+//
+call max_percent3(@M);
+select @M
