@@ -244,11 +244,40 @@ Stored Procedure -
 
 * A stored procedure is a collection of pre-compiled SQL statements
 * Stored Procedures are created to perform one or one DML operation on the Database.
+
+Here are some key characteristics and benefits of stored procedures:
+
+Encapsulation: Stored procedures allow you to encapsulate a set of SQL statements or procedural logic into a single unit, making it easier to manage and maintain.
+
+Reusability: Once created, stored procedures can be reused in multiple parts of an application or by different applications. This promotes code reuse and helps maintain consistency.
+
+Performance: Stored procedures are precompiled and stored in a compiled form, which can improve performance as they reduce the overhead of parsing and compiling the SQL statements each time they are executed.
+
+Security: Stored procedures can be used to control access to data by defining and controlling the execution of specific operations. Users may only have permission to execute a stored procedure and not direct access to the underlying tables.
+
+Modularity: Stored procedures support modular programming by breaking down complex logic into smaller, more manageable units. This can enhance code readability and maintenance.
+
+Transaction Management: Stored procedures can be used to wrap multiple SQL statements within a transaction, ensuring that either all statements within the procedure execute successfully or none at all.
 delimiter //
+
+SHOW PROCEDURE STATUS;
+
 create procedure procedure name([in | OUT | INOUT] PARAMETER_name datatype)
 BEGIN
 Declear_Section
 Executable_section
 //
+
+Example
+delimiter //
+create procedure Data_insert3()
+begin
+select * from accnt;
+end
+//
+
+To execute a stored procedure
+	call Data_insert3();
+
 
 
