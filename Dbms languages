@@ -258,10 +258,10 @@ Security: Stored procedures can be used to control access to data by defining an
 Modularity: Stored procedures support modular programming by breaking down complex logic into smaller, more manageable units. This can enhance code readability and maintenance.
 
 Transaction Management: Stored procedures can be used to wrap multiple SQL statements within a transaction, ensuring that either all statements within the procedure execute successfully or none at all.
-delimiter //
+
 
 SHOW PROCEDURE STATUS;
-
+delimiter //
 create procedure procedure name([in | OUT | INOUT] PARAMETER_name datatype)
 BEGIN
 Declear_Section
