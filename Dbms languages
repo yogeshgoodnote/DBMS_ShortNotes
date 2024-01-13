@@ -261,6 +261,7 @@ Transaction Management: Stored procedures can be used to wrap multiple SQL state
 
 
 SHOW PROCEDURE STATUS;
+----------------------------------------------------------------------------------------------------------------------------------------
 delimiter //
 create procedure procedure name([in | OUT | INOUT] PARAMETER_name datatype)
 BEGIN
@@ -278,12 +279,15 @@ end
 //
 
 To execute a stored procedure
-	call Data_insert3();
+call Data_insert3();
 
+-------------------------------------------------------------------------------------------------------------------------------------
 
+In Parameter: 
+in parameter ka use input parameter ki tarah kiya jata h
+isme jab ham procedure ko call karte h tab  parameter ki value ko procedure ki body m execute ho rahe code k liye use kiya jata h .
 
-In Parameter: in parameter ka use input parameter ki tarah kiya jata h
-isme jab ham procedure ko call karte h tab  parameter ki value ko procedure ki body m execute ho rahe code k liye diya jata h .
+Ex
 create database bank;
 use bank;
 create table student(S_id int primary key auto_increment,S_name varchar(10));
@@ -293,13 +297,14 @@ begin
 insert into student(S_name) values(S_Name);
 end
 //
+
 delimiter //
 create procedure Get_Data(in n int)
 begin
 select * from student limit n;
 end
-
 //
+Call Procedure
 call Put_Data('rohit');
 call Get_Data(1);
 
@@ -315,17 +320,17 @@ end
 //
 call max_percent3(@M);
 select @M
+--------------------------------------------------------------------
 
-show tables from bank;
-select * from student;
-alter table student add column percentage int;
-describe student;
-insert into student(S_name,percentage) values('shyam',72);
-delimiter //
-create procedure max_percent3(out m int)
-begin
-select max(percentage) into m from student;
-end
-//
-call max_percent3(@M);
-select @M
+INOUT-
+Is parameter ka use in parameter aur out parameter dono ki tarah kiya jata h.
+Ex
+
+	delimiter //
+	create procedure P(inout vari)
+	begin
+	select S_name into vari from student where percentage >vari;
+	end
+	//
+	call p(@outdata)
+)
