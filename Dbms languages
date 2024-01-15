@@ -345,6 +345,8 @@ Stored Function:
 
 TO SEE FUNCTION
 SHOW FUNCTION STATUS;
+To see the source code of a specific function
+SHOW CREATE FUNCTION your_function_name;
 
  SYNTAX-
 	DELIMITERS //
@@ -355,4 +357,23 @@ SHOW FUNCTION STATUS;
 	BEGIN
 	END
 	//
-
+Ex
+DELIMITER //
+CREATE FUNCTION GRAD2(percent decimal)
+returns varchar(10)
+deterministic
+begin
+declare G varchar(5);
+if (percent >=33) and (percent<=40) then
+set G="C";
+elseif (percent>40 and percent<60)  then
+set G="B";
+elseif (percent>=60)  then
+set G="A";
+else 
+set G= fail;
+end if;
+return(G);
+end
+//
+select s_name,percent,GRAD2(percent) from student;
