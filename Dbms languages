@@ -347,6 +347,9 @@ TO SEE FUNCTION
 SHOW FUNCTION STATUS;
 To see the source code of a specific function
 SHOW CREATE FUNCTION your_function_name;
+TO DELETE FUNCTION
+DROP FUNCTION [IF EXISTS] function_name;
+
 
  SYNTAX-
 	DELIMITERS //
