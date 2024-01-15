@@ -334,3 +334,25 @@ Ex
 	//
 	call p(@outdata)
 )
+
+Stored Function:
+
+* In MySQL, a function is a set of SQL statements.
+* it is associated with the database.
+* a function must return a single value but the procedure can be or not.
+* a function uses only input parameters but the procedure uses in, out,inout parameter
+* function can be called within  the procedure but procedure can't be called within the function.
+
+TO SEE FUNCTION
+SHOW FUNCTION STATUS;
+
+ SYNTAX-
+	DELIMITERS //
+	CREATE FUNCTION FUNCTION_NAME(FUNCTION_PARAMETERS(S))
+	RETURNS DATATYPE
+	{CHARACTERISTISTICS}
+	FUN_BODY;
+	BEGIN
+	END
+	//
+
