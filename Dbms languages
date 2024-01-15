@@ -350,6 +350,11 @@ SHOW CREATE FUNCTION your_function_name;
 TO DELETE FUNCTION
 DROP FUNCTION [IF EXISTS] function_name;
 
+Deterministic Keyword: DETERMINISTIC: This indicates that the function is deterministic, 
+meaning that it should produce the same result for the same input.
+JO INPUT DIYA H UNKA RESULT HAMESHA UNHI DATA TYPE KA HOGA.
+
+//FUNCTION SAME VALUE KO RETURN NHI KAREGA
 
  SYNTAX-
 	DELIMITERS //
