@@ -388,3 +388,31 @@ return(G);
 end
 //
 select s_name,percent,GRAD2(percent) from student;
+
+
+* ACID Property:
+   Any Transaction follow ACID Property,ACID property stands for A for automicity,C for consitancy,isolation,D for durability
+   A for Either all or None
+    * Atomicity  :
+	Transaction complete or failed
+    * Consistency
+	Before the transaction and after the transaction sum of money should be same.
+	A=2000
+	B=3000
+
+	Both 
+	Before the transaction the sum of the money
+
+	A+B =5000
+ 	 A account transfer 1000 RS to account B
+  	After the transaction sum of the money same
+ 	A=A-1000 Remain=1000
+	 B=B+1000 remain=4000
+ 	 A+B=5000
+	* Isolation:
+	  One transaction not affect to another Transaction.
+	Ex-
+	Multiple transaction not affect to each other.
+
+Durability
+Permanent changes in database
