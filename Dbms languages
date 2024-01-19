@@ -415,4 +415,4 @@ select s_name,percent,GRAD2(percent) from student;
 	Multiple transaction not affect to each other.
 
 Durability
-Permanent changes in database
+Permanent changes in the database
