@@ -4,7 +4,14 @@ Dbms:
   -> Database->Processed information.
 
 There are 5 types of DBMS Languages
-              
+
+1 DDL-Data Definition Language
+2 DML-Data Manipulation Language
+3 DCL-Data Control Language
+4 TCL -Transaction Control Language
+5 DQL-Data Query Language
+
+1 DQL
   1 DDL-DDL statements are used to specify the schema of the 
     database.
   DDL commands-create, drop, alter, rename
