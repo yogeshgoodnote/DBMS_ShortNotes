@@ -119,11 +119,14 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
    	 \q
 	Note *After executing the REVOKE statement, you need to run FLUSH PRIVILEGES; to apply the changes immediately:
 ------------------------------------------------------------------------------------------------------------------------------
-	
+	EXTRA COMMANDS
+	SHOW VARIABLES LIKE 'autocommit';
+	O/P AUTOCOMMIT ON/OFF
 	5. TCL stands for Transaction control language.
 	TCL statements are used to control transactions in the database.
 	There are two tcl statements-
 	* COMMIT- This command is used to permanently save the changes made during the current transaction.
+	
 	 COMMIT;
 	* ROLLBACK: This command is used to undo the changes made during the current transaction.
 	ROLLBACK;
