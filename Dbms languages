@@ -98,6 +98,8 @@ TRUNCATE-TO DELETE TABLE DATA(EMPTY TABLE)
 		REVOKE SELECT ON school. staff from yogesh@hostname;
 -------------------------------------------------------------------------------------------------------------------------------------
 	
+C:\Program Files (x86)\MySQL\MySQL Server 8.0\bin> mysql -u your_username -p// to log in mysql user
+
 	Extra Commands
 	User Creation
  	 CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
