@@ -305,25 +305,42 @@ Here are some key characteristics and benefits of stored procedures:
 	drop procedure if exists enroll;
 ----------------------------------------------------------------------------------------------------------------------------------------
 Syntax
-	delimiter //
+EX-1	delimiter //
 	create procedure procedure name([in | OUT | INOUT] PARAMETER_name datatype)
 	BEGIN
 	Declear_Section
 	Executable_section
 	//
-
-	Default Parameter
-	Example
+EX-2
 	delimiter //
-	create procedure Data_insert3()
-	begin
-	select * from accnt;
-	end
-	//
+create procedure add_student (in sname varchar(70))
+begin
+insert into student (sname) values(sname);
+end
+//
 
-	To execute a stored procedure
-	call Data_insert3();
+* To call procedure
+call add_student("Rohit")
+to see data
+select * from student
+EX 3
+delimiter //
+create procedure enroll_student(in sid bigint,crs_id varchar(5),crs_name varchar(10),crs_fees decimal)
+begin
+insert into enroll(sid,crs_id,crs_name,crs_fees,rgstrd)values(sid,crs_id,crs_name,crs_fees,now());
+end
+//
+To call
+call enroll_student(1,"CS-01","Computer",60000)
 
+EX-3
+delimiter //
+create procedure  submit_fees(enid bigint,sfess double)
+begin
+insert into payment(enid,sfess,sdate)values(enid,sfees,now());
+end
+//
+call submit_fees(4,5000)
 -------------------------------------------------------------------------------------------------------------------------------------
 
 In Parameter: 
