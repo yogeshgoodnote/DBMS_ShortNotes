@@ -571,3 +571,5 @@ In summary, MySQL implements ACID properties to maintain the integrity, reliabil
 * Retrieve data from multiple  tables
 select student.sid,student.sname,enroll.enid,enroll.crs_name as course_name,enroll.crs_fees,payment.sfess as submit_fess from student join enroll on student.sid=enroll.sid
 join payment on enroll.enid=payment.enid
+
+Component of ER- Diagram-https://bit.ly/3VnguDV
