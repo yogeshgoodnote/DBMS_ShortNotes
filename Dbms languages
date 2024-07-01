@@ -29,15 +29,13 @@ Examples include MongoDB, Cassandra, and Redis.
  
 DIFFERENCE BETWEEN DBMS AND RDBMS 
 
-Feature	DBMS	RDBMS
-Definition	General database management system	Relational database management system
+			DBMS				RDBMS
+Definition	Database Management System	Relational database management system
 Data Structure	Hierarchical, network, etc.	Tabular with relationships (tables)
 Normalization	May not support normalization	Supports normalization
-Data Storage	Files, less structured	Tables with rows and columns
-Query Language	Procedural languages, not necessarily SQL	SQL (Structured Query Language)
-ACID Properties	Less rigorously enforced	Strictly enforced
-Scalability	Generally less scalable	Highly scalable
-Examples	IBM IMS, Integrated Data Store	MySQL, PostgreSQL, Oracle, SQL Server
+Scalability	Generally less scalable		Highly scalable
+Examples	IBM IMS, Integrated Data Store	MySQL, PostgreSQL, Oracle, SQL Server 
+
 (1)Relational Database (RDBMS) 
 * RDBMS STORES DATA IN TABLE FORM
 * IN RDBMS WE CAN CREATE RELATIONSHIPS BETWEEN TABLES. 
