@@ -1,3 +1,9 @@
+Data: Data is a collection of facts related to any object.
+data can be an image, audio, video, text, etc.
+Database: A database is an organized collection of logically related data.
+a contractor having worker data like name, address, and phone number.
+
+
 Dbms:
   ->Dbms stands for the database management system
   -> It is software or application that allows to insert, update, delete, and manage the database
