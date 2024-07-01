@@ -11,21 +11,75 @@ Dbms:
   -> It is software or application that allows to insert, update, delete, and manage the database
   -> Database->Processed information.
  
-Types of DBMS 
-Relational Database (RDBMS) 
+ 
+Types of DBMS:
+Relational DBMS (RDBMS): Organizes data into tables (relations) that 
+can be linked by common fields. Examples include MySQL, PostgreSQL,  
+Oracle, and Microsoft SQL Server. 
+
+
+Hierarchical DBMS: Organizes data in a tree-like structure.  
+Example: IBM Information Management System (IMS).
+Network DBMS: Organizes data as a graph structure, allowing more complex relationships. 
+Example: Integrated Data Store (IDS).
+Object-oriented DBMS (OODBMS): Stores data in objects, similar to object-oriented programming. 
+Example: ObjectDB.
+NoSQL DBMS: Designed for unstructured data, allowing for flexibility and scalability.  
+Examples include MongoDB, Cassandra, and Redis. 
+
+(1)Relational Database (RDBMS) 
 * RDBMS STORES DATA IN TABLE FORM
 * IN RDBMS WE CAN CREATE RELATIONSHIPS BETWEEN TABLES. 
-* MySql, and Microsoft SQL server
+* Ex MySql, and Microsoft SQL server 
+	CREATE TABLE Student( 
+	ROLL_NO INT PRIMARY KEY, 
+	FULL_NAME VARCHAR(15), 
+	AGE INT 
+	) 
+(2)Object-Oriented Database Management System 
+* The object-oriented database management system represents  
+  the data in the form of objects which is used in object-oriented programming.
+ * The OODBMS is based on object-oriented features, which include data encapsulation, 
+  inheritance and polymorphism. 
+
+	
+  (3)Hierarchical Database
+  In the hierarchical database management system, the data is organized into a tree-like structure. 
+  We can also say that the data is stored in such a way that they are in one to many relationships  
+  with each other. The hierarchy starts with a root node that contains root data.  
+  Then child nodes are added to the root (parent) node and make a tree-like structure.  
+  A few examples of hierarchical databases are IMS(IBM) and Windows registry (Microsoft).  
+  See the below image to understand the hierarchical database more clearly. 
+	Here's a simplified conceptual representation using IMS commands:
+	// Define the database schema
+DATABASE DBDNAME(COMPANY)
+  DATASET  DD1
+    SEGMENT  NAME(DEPARTMENT)
+    FIELD    NAME(DEPT-NAME)
+    SEGMENT  NAME(EMPLOYEE)
+    FIELD    NAME(EMP-ID)
+    FIELD    NAME(EMP-NAME)
+    FIELD    NAME(EMP-POSITION)
+    FIELD    NAME(EMP-EMAIL)
+  END
+END
+
+// Insert data into the database
+INSERT INTO DEPARTMENT (DEPT-NAME) VALUES ('Sales')
+INSERT INTO EMPLOYEE (EMP-ID, EMP-NAME, EMP-POSITION, EMP-EMAIL) VALUES (1, 'Alice', 'Sales Manager', 'alice@example.com')
+INSERT INTO EMPLOYEE (EMP-ID, EMP-NAME, EMP-POSITION, EMP-EMAIL) VALUES (2, 'Bob', 'Sales Associate', 'bob@example.com')
+INSERT INTO DEPARTMENT (DEPT-NAME) VALUES ('HR')
+INSERT INTO EMPLOYEE (EMP-ID, EMP-NAME, EMP-POSITION, EMP-EMAIL) VALUES (3, 'Charlie', 'HR Manager', 'charlie@example.com')
+INSERT INTO EMPLOYEE (EMP-ID, EMP-NAME, EMP-POSITION, EMP-EMAIL) VALUES (4, 'David', 'HR Associate', 'david@example.com')
 
 
+  There are 5 types of DBMS Languages
 
-There are 5 types of DBMS Languages
-
-1 DDL-Data Definition Language
-2 DML-Data Manipulation Language
-3 DCL-Data Control Language
-4 TCL -Transaction Control Language
-5 DQL-Data Query Language
+	1 DDL-Data Definition Language
+	2 DML-Data Manipulation Language
+	3 DCL-Data Control Language
+	4 TCL -Transaction Control Language
+	5 DQL-Data Query Language
 
 1 DQL
   1 DDL-DDL statements are used to specify the schema of the 
