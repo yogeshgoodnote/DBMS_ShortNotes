@@ -3,12 +3,12 @@ Data: Data is a collection of facts related to any object.
 data can be an image, audio, video, text, etc.
  
 Database: A database is an organized collection of logically related data.
-a contractor having worker data like name, address, and phone number.
+a contractor having workers database like name, address, and phone number.
 -> Database->Processed information.
 
 Dbms:
     -> Dbms stands for database management system it is software that is an intermediator between the user and the database,  
-      and it provides a systematic approach to storing, updating, deleting and inserting data. 
+      and it provides a systematic approach to storing, updating, deleting, and inserting data. 
 
 Types of DBMS:
  
