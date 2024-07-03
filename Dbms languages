@@ -22,7 +22,7 @@ Oracle, and Microsoft SQL Server.
 Example: IBM Information Management System (IMS). 
 
 Network DBMS: Organizes data as a graph structure, allowing more complex relationships. 
-Example: Integrated Data Store (IDS). 
+Example: Integrated Data Store (IDMS). 
 
 Object-oriented DBMS (OODBMS): Stores data in objects, similar to object-oriented programming. 
 Example: ObjectDB. 
